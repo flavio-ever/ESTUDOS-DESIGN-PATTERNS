@@ -44,9 +44,12 @@ Typescript, UML e Readme
 - State: encapsula comportamentos baseados em estados e usa a delegação para alternar comportamentos
 - Observer: permite notificar outros objetos quando ocorre uma mudança de estado
 
-## Design system e Design pattern
+## Design system & Design pattern
 - **Principle**: We should teach others in order to educate ourselves as well as others, and overall make our nation a progressive nation.
 - **Pattern**: In our country, each medical doctor graduate is supposed to teach 6 months in a far-away village to complete his/her degree.
+
+## Connection between GoF Design Patterns and SOLID
+- GOF are patterns i.e. proven design solutions to recurring problems. SOLID are principles and are not tied to any specific problem domain hence true in any scenario. 
 
 > Note: To some extent, we can refer principles as a set of rules that we can follow in every step of programming, but patterns are a set of structured solutions for some specific problems that we may face during coding -not always happening.
 
@@ -56,3 +59,4 @@ Typescript, UML e Readme
 - [Design Principle Solid POO](https://www.zup.com.br/blog/design-principle-solid)
 - [GOF](https://www.devmedia.com.br/design-patterns-padroes-gof/16781)
 - [Design Pattern x Design System](https://stackoverflow.com/questions/31317141/whats-the-difference-between-design-patterns-and-design-principles)
+- [Principle SOLID - GOF](https://stackoverflow.com/questions/21470903/solid-principle-and-gof-mapping)
