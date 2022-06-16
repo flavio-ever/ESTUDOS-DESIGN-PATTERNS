@@ -1,0 +1,53 @@
+<mxfile host="65bd71144e">
+    <diagram id="17Rdm5tTzwF7dkyEERoV" name="Página-1">
+        <mxGraphModel dx="2021" dy="1782" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="#ffffff" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="5" value="Pessoa&#10;&lt;&lt;abstract&gt;&gt;" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=50;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;sketch=0;fontColor=#000000;strokeColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="-499" y="-722" width="140" height="153" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="- primeiroNome&#10;- segundoNome&#10;- endereco&#10;" style="text;strokeColor=#000000;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#000000;" parent="5" vertex="1">
+                    <mxGeometry y="50" width="140" height="57" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="+ obterNome()&#10;+ obterEndereco()" style="text;strokeColor=#000000;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#000000;" parent="5" vertex="1">
+                    <mxGeometry y="107" width="140" height="46" as="geometry"/>
+                </mxCell>
+                <mxCell id="41" value="PessoaJuridica" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=37;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;sketch=0;fontColor=#000000;strokeColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="-287" y="-545" width="140" height="99" as="geometry"/>
+                </mxCell>
+                <mxCell id="42" value="- cnpj" style="text;strokeColor=#000000;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#000000;" parent="41" vertex="1">
+                    <mxGeometry y="37" width="140" height="29" as="geometry"/>
+                </mxCell>
+                <mxCell id="43" value="+ cnpj()" style="text;strokeColor=#000000;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#000000;" parent="41" vertex="1">
+                    <mxGeometry y="66" width="140" height="33" as="geometry"/>
+                </mxCell>
+                <mxCell id="48" value="" style="endArrow=classic;html=1;fontColor=#000000;strokeColor=#000000;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="41" target="6" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="-228" y="-549" as="sourcePoint"/>
+                        <mxPoint x="-178" y="-599" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="-217" y="-643"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="52" style="edgeStyle=none;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontColor=#000000;strokeColor=#000000;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" parent="1" source="49" target="6" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="-617" y="-643"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="49" value="PessoaFisica" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=37;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;sketch=0;fontColor=#000000;strokeColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="-687" y="-545" width="140" height="99" as="geometry"/>
+                </mxCell>
+                <mxCell id="50" value="- cpf" style="text;strokeColor=#000000;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#000000;" parent="49" vertex="1">
+                    <mxGeometry y="37" width="140" height="29" as="geometry"/>
+                </mxCell>
+                <mxCell id="51" value="+ cpf()" style="text;strokeColor=#000000;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#000000;" parent="49" vertex="1">
+                    <mxGeometry y="66" width="140" height="33" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

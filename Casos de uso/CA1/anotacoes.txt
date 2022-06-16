@@ -1,0 +1,155 @@
+Cria o projeto;
+
+Testa se o projeto builda com algo simples;
+
+Instala o tdd, configura o tdd, npm i jest @types/jest --save;
+
+Cria o primeiro teste, roda o teste;
+
+`
+    // test/EnterParkingLot.test.ts
+
+    test("Should enter parking lot", function () {
+        expect(1).toBe(1)
+    })
+`
+
+-------------------------------------------------------------------
+
+Começa a definir as camas src/core/entity, src/core/usecase
+
+`
+    // entity/ParkingLot.ts
+
+    export default class ParkingLot {
+        code: any;
+        capacity: any;
+        openHour: any;
+        closeHour: any;
+
+        constructor(code, capacity, openHour, closeHour) {
+            this.code = code;
+            this.capacity = capacity; 
+            this.openHour = openHour;
+            this.closeHour = closeHour;
+        }
+    }
+`
+
+`
+    // usecase/EnterParkingLot.ts
+
+    import ParkingLot from "../entity/ParkingLot";
+
+    export default class EnterParkingLot {
+        // Caso de uso será executado
+        execute() {
+            const partkingLot = new ParkingLot("Shopping", 100, 8, 22);
+
+            return partkingLot;
+        }
+    }
+`
+
+Refatora o primeiro teste e veja se ele passou;
+
+`
+    // entity/ParkingLot.ts
+
+    import EnterParkingLot from "../src/core/usecase/EnterParkingLot";
+
+    test("Should enter parking lot", function () {
+        const enterParkingLot = new EnterParkingLot();
+        const parkingLot = enterParkingLot.execute();
+
+        expect(parkingLot.code).toBe("Shopping"); 
+    })
+`
+
+"Para que eu possa entrar em um estacionamento, este precisa existir, e para ele existir, 
+precisamos buscar ele em algum lugar e não pode ser uma instancia fisica como fizemos no use case. Então precisamos criar, 
+dentro do nosso núcleo, entre a borda de use case e controller (imagem the clean architecture), vamos usar a inversão de dependencia.
+
+Como que eu faço para desacoplar as camadas? Não vamos falar mais diretamente com o banco de dados."
+
+"Em uma linguagem orientada a objetos, a forma mais simples de desacoplar, é justamente inverter a dependencia. O que quer dizer? Quer dizer que não vou dar um "new".
+Porque se no caso de uso eu instancio o banco de dados, eu estou acoplado. Forma de pensar: Na hora que voce for executar, voce vai receber essa implementacao completa. 
+Para isso que precisamos de uma interface"
+
+Criar uma camada de repository
+
+`
+    // repository/parkingLotRepository.ts
+
+    import ParkingLot from "../entity/ParkingLot";
+
+        export default interface ParkingLotRepository {
+            getParkingLot(code: string): Promise<ParkingLot>;
+    }
+
+`
+Refatorar
+
+`
+    // o usecase/EnterParkingLot.ts
+
+    import ParkingLot from "../entity/ParkingLot";
+    import ParkingLotRepository from "../repository/ParkingLotRepository";
+
+    export default class EnterParkingLot {
+        private parkingLotRepository: ParkingLotRepository;
+
+        constructor(parkingLotRepository: ParkingLotRepository) {
+            this.parkingLotRepository = parkingLotRepository;
+        }
+
+        // Caso de uso será executado
+        async execute(code: string) {
+            const partkingLot = await this.parkingLotRepository.getParkingLot(code);
+            return partkingLot;
+        }
+    }
+` 
+
+"Os testes vão começar a falhar, se antes da dependencia era do usecase, agora será antes do use case, mas antes vamos criar a camada de infra, e um repository para infra"
+
+Criar a camada de infra/repository
+
+`
+    // infra/repository/ParkingLotMemoryRepository
+
+    import ParkingLot from "../../core/entity/ParkingLot";
+    import ParkingLotRepository from "../../core/repository/ParkingLotRepository";
+
+    export default class ParkingLotRepositoryMemory implements ParkingLotRepository {
+        getParkingLot(code: string): Promise<ParkingLot> {
+            return Promise.resolve(new ParkingLot("Shopping", 5, 8, 22));
+        }
+        
+    }
+`
+
+Refatorar os testes e rodar os testes
+
+`
+    // test/EnterParkingLot.test.ts
+
+    import EnterParkingLot from "../src/core/usecase/EnterParkingLot";
+    import ParkingLotRepositoryMemory from "../src/infra/repository/ParkingLotRepositoryMemory";
+
+    test("Should enter parking lot", async () => {
+        const parkingLotRepositoryMemory = new ParkingLotRepositoryMemory();
+        
+        const enterParkingLot = new EnterParkingLot(parkingLotRepositoryMemory);
+        const parkingLot = await enterParkingLot.execute("shopping");
+
+        expect(parkingLot.code).toBe("Shopping"); 
+    })
+`
+
+Com isso, desacoplamos a camada de persistencia (banco de dados);
+
+"Camada de Adaptadores, não é tao desejado que vc envie para a camada de persistencia, a sua camada de negocio pq ela pode mudar por motivos diferentes, pode
+ser que o banco de dados tenha uma terminologia diferente, não tenha medo de fazer, faça."
+
+"" 

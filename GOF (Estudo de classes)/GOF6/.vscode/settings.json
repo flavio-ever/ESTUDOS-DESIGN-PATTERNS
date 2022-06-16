@@ -1,0 +1,10 @@
+{
+    "code-runner.executorMap": {
+        // clear (apenas p/ linux), files = imports/exports, --transpile-only = transpile + rapido
+        "typescript": "npx ts-node --files --transpile-only",
+    },
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true,
+        "source.fixAll": true
+    }
+}

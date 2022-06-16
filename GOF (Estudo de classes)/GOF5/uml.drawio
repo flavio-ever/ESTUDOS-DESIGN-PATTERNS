@@ -1,0 +1,38 @@
+<mxfile host="65bd71144e">
+    <diagram id="17Rdm5tTzwF7dkyEERoV" name="Página-1">
+        <mxGraphModel dx="2021" dy="2086" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="#ffffff" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="5" value="&lt;&lt;abstract&gt;&gt;&#10;Animal" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=50;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;sketch=0;fontColor=#000000;strokeColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="-637" y="-908" width="178" height="150" as="geometry">
+                        <mxRectangle x="-505" y="-802" width="89" height="50" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="6" value="" style="text;strokeColor=#000000;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#000000;" parent="5" vertex="1">
+                    <mxGeometry y="50" width="178" height="57" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="# makeNoise(): string&#10;+ makeSound()" style="text;strokeColor=#000000;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#000000;" parent="5" vertex="1">
+                    <mxGeometry y="107" width="178" height="43" as="geometry"/>
+                </mxCell>
+                <mxCell id="21" value="&lt;h1&gt;&lt;/h1&gt;&lt;font color=&quot;#000000&quot;&gt;&lt;span style=&quot;font-size: 24px&quot;&gt;&lt;b&gt;Abstract&lt;br&gt;&lt;/b&gt;&lt;/span&gt;&lt;br&gt;Lorem&lt;br&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="-633" y="-1045" width="422" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="45" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=0.501;entryY=1.012;entryDx=0;entryDy=0;entryPerimeter=0;strokeColor=#2B2B2B;" parent="1" source="42" target="9" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="42" value="Dog" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=50;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;sketch=0;fontColor=#000000;strokeColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="-637" y="-698" width="178" height="150" as="geometry">
+                        <mxRectangle x="-505" y="-802" width="89" height="50" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="43" value="" style="text;strokeColor=#000000;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#000000;" parent="42" vertex="1">
+                    <mxGeometry y="50" width="178" height="57" as="geometry"/>
+                </mxCell>
+                <mxCell id="44" value="# makeNoise(): string" style="text;strokeColor=#000000;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#000000;" parent="42" vertex="1">
+                    <mxGeometry y="107" width="178" height="43" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
