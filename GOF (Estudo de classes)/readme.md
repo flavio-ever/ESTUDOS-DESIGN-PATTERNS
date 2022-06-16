@@ -4,7 +4,7 @@
 Reunir todas as minhas pesquisas e conhecimentos sobre engenharia/arquitetura de sofware. Principios e Patterns
 
 ## Conteúdo
-Typescript, UML e Readme
+Typescript, UML e Diagramas
 
 ## Solid Principles
 - [S] - Single-responsiblity Principle
