@@ -47,11 +47,11 @@ Typescript, UML e Readme
 ## Design system & Design pattern
 - **Principle**: We should teach others in order to educate ourselves as well as others, and overall make our nation a progressive nation.
 - **Pattern**: In our country, each medical doctor graduate is supposed to teach 6 months in a far-away village to complete his/her degree.
+> Note: To some extent, we can refer principles as a set of rules that we can follow in every step of programming, but patterns are a set of structured solutions for some specific problems that we may face during coding -not always happening.
 
 ## Connection between GoF Design Patterns and SOLID
-- GOF are patterns i.e. proven design solutions to recurring problems. SOLID are principles and are not tied to any specific problem domain hence true in any scenario. 
+- GOF are patterns i.e. proven design solutions to recurring problems. SOLID are principles and are not tied to any specific problem domain hence true in any scenario.
 
-> Note: To some extent, we can refer principles as a set of rules that we can follow in every step of programming, but patterns are a set of structured solutions for some specific problems that we may face during coding -not always happening.
 
 ## Links e Créditos
 - [Otávio Miranda](https://www.youtube.com/channel/UCORZcu08VQiRCKpVGHTWwAA)
